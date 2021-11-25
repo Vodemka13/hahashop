@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  background: #FFF;
+}
+
+.header {
+  background: rgba(208, 206, 206, 0.55)
+}
+
+.logos_header {
+  padding: .5%;
+  width: 10%;
+}
+
+.btns_header {
+  padding: 1%;
+  width: 5%;
+  margin-left: 82%
+}
+
+.title {
+  position: absolute;
+  width: 45%;
+  height: fit-content;
+  margin: 0;
+  margin-left: 7%;
+  margin-top: 1%;
+  font-size: 4.5em;
+  font-weight: 500;
+}
+
+.desc {
+  position: absolute;
+  width: 35%;
+  height: fit-content;
+  margin: 0;
+  margin-left: 7%;
+  margin-top: 14%;
+  font-size: 2.2em;
+  font-weight: 500;
+  color: rgba(116, 114, 114, 1);
+}
+
+.catalogScroll, .leaveWill {
+  position: absolute;
+  margin: 0;
+  margin-top: 25%;
+  margin-left: 7%;
+  background-color: rgba(229, 228, 228, 1);
+  width: 25%;
+  height: 8%;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+
+.leaveWill {
+  background-color: black;
+  margin-top: 30.5%;
+  color: white;
+}
+
+.btnText {
+  font-weight: 400;
+  margin-top: 3%;
+}
+
+.modelsTitle {
+  font-size: 2.2em;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 7%;
+  margin-top: 38%;
+}
