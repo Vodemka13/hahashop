@@ -1,4 +1,4 @@
-[!kot]()
+[!kot](./kotyonok_poymal_fleshbek_berserk_prikol.gif)
 
 
 
