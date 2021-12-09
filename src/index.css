@@ -17,18 +17,23 @@ code {
 }
 
 .header {
-  background: rgba(208, 206, 206, 0.55)
+  background: rgba(208, 206, 206, 0.55);
+  width: 100%;
+  min-height: 50px;
 }
 
 .logos_header {
   padding: .5%;
+  padding-left: 1%;
+  min-width: 130px;
   width: 10%;
 }
 
 .btns_header {
   padding: 1%;
   width: 5%;
-  margin-left: 82%
+  min-width: 100px;
+  padding-left: 80%
 }
 
 .title {
@@ -36,20 +41,24 @@ code {
   width: 45%;
   height: fit-content;
   margin: 0;
-  margin-left: 7%;
-  margin-top: 1%;
-  font-size: 4.5em;
+  margin-left: 8%;
+  margin-top: 2%;
+  font-size: 420%;
   font-weight: 500;
+
+  @media only screen and (min-width : 500px) {
+    color: green;
+  }
 }
 
 .desc {
   position: absolute;
-  width: 35%;
+  width: 45%;
   height: fit-content;
   margin: 0;
-  margin-left: 7%;
-  margin-top: 14%;
-  font-size: 2.2em;
+  margin-left: 8%;
+  margin-top: 15%;
+  font-size: 225%;
   font-weight: 500;
   color: rgba(116, 114, 114, 1);
 }
@@ -57,32 +66,124 @@ code {
 .catalogScroll, .leaveWill {
   position: absolute;
   margin: 0;
-  margin-top: 25%;
+  margin-top: 27%;
   margin-left: 7%;
   background-color: rgba(229, 228, 228, 1);
   width: 25%;
-  height: 8%;
+  height: 60px;
   border-radius: 30px;
   text-align: center;
   font-size: 1.1em;
+  display: block;
 }
 
 
 .leaveWill {
   background-color: black;
-  margin-top: 30.5%;
+  margin-top: 32%;
   color: white;
 }
 
 .btnText {
+  position: relative;
   font-weight: 400;
-  margin-top: 3%;
+  top: -10%;
+}
+
+.sliderPrev {
+  margin-top: 5%;
+  list-style: none;
+  position: absolute;
+  width: 25%;
+  height: 100px;
+  left: 60%;
+  
+}
+
+.prevImg {
+  width: inherit;
+  display: inline-block;
+  object-fit: cover;
+  object-position: center;
+  height: 500px;
 }
 
 .modelsTitle {
+  position: absolute;
   font-size: 2.2em;
   font-weight: 500;
   margin: 0;
   margin-left: 7%;
-  margin-top: 38%;
+  margin-top: 30%;
+}
+
+.modelsSlider {
+  position: absolute;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 80%;
+  align: center;
+  margin-left: 10%;
+  margin-top: 35%;
+}
+
+.card {
+  width: min-content;
+  margin: 0;
+  display: inline-block;
+  /* padding-right: 3%; */
+  padding-top: 3%;
+  /* margin-top: 80%; */
+  /* padding-bottom: 10%; */
+}
+
+.cardImg {
+  object-fit: cover;
+  object-position: center;
+  width: 250px;
+  height: 250px;
+}
+
+.cardName {
+  position: relative;
+  display:list-item;
+  width: fit-content;
+  font-size: 1.9em;
+  font-weight: 400;
+  margin: 0;
+  padding-left: 2%;
+}
+
+.cardDesc {
+  display: inline;
+  position: relative;
+  width: fit-content;
+  font-size: 0.9em;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 0%;
+  padding-left: 2%;
+}
+
+.cardBill {
+  display: inline;
+  position: relative;
+  width: fit-content;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 0%;
+  padding-left: 1%;
+}
+
+.cardSpan {
+  display: inline;
+}
+
+.modelsList {
+  margin: 0;
+  display: inline;
+  list-style: none;
+  white-space: nowrap;
+  width: 100px;
 }
