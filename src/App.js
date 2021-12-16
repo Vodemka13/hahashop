@@ -8,6 +8,20 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import { useEffect } from "react/cjs/react.development";
 
+
+
+const models = [
+  {
+    'title': 'Слоны',
+    'desc': 'Слоненок в подарок :)',
+    'cost': '100$',
+    'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+  }
+]
+
+
+
+
 function App() {
 
   useEffect(() => {
@@ -33,11 +47,14 @@ function App() {
     infinite: true,
     slidesToShow: 1,
     autoPlay: true,
-    autoPlaySpeed: 2000,
+    autoPlaySpeed: 100,
+    speed: 400,
     arrows: true,
     slidesToScroll: 1,
     className: "sliderPrev",
     cssEase: "linear",
+    pauseOnHover: false,
+    pauseOnFocus: false,
   }
 
   return (
