@@ -19,171 +19,167 @@ code {
 .header {
   background: rgba(208, 206, 206, 0.55);
   width: 100%;
-  min-height: 50px;
+  min-height: 3vw;
 }
 
 .logos_header {
   padding: .5%;
-  padding-left: 1%;
-  min-width: 130px;
-  width: 10%;
+  padding-left: 7vw;
+  min-width: 11vw;
+  width: 11vw;
 }
 
 .btns_header {
   padding: 1%;
-  width: 5%;
-  min-width: 100px;
-  padding-left: 80%
+  width: 6vw;
+  min-width: 6vw;
+  padding-left: 65vw;
 }
 
+
+
 .title {
-  position: absolute;
-  width: 45%;
+  position: relative;
+  width: 60%;
   height: fit-content;
   margin: 0;
   margin-left: 8%;
   margin-top: 2%;
-  font-size: 420%;
+  font-size: 6vw;
   font-weight: 500;
-
-  @media only screen and (min-width : 500px) {
-    color: green;
-  }
 }
 
 .desc {
-  position: absolute;
-  width: 45%;
+  position: relative;
+  width: 50%;
   height: fit-content;
   margin: 0;
   margin-left: 8%;
-  margin-top: 15%;
-  font-size: 225%;
+  margin-top: 2%;
+  font-size: 3vw;
   font-weight: 500;
   color: rgba(116, 114, 114, 1);
 }
 
-.catalogScroll, .leaveWill {
-  position: absolute;
+.catalogScroll, .leaveWill, .catalogBtn {
+  position: relative;
   margin: 0;
-  margin-top: 27%;
+  margin-top: 2%;
   margin-left: 7%;
   background-color: rgba(229, 228, 228, 1);
-  width: 25%;
-  height: 60px;
+  width: 30vw;
+  height: 4vw;
   border-radius: 30px;
+  padding-top: 0.1vw;
   text-align: center;
-  font-size: 1.1em;
+  font-size: 1.2vw;
   display: block;
 }
 
+.catalogBtn {
+  position: absolute;
+  z-index: 1;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
 
 .leaveWill {
   background-color: black;
-  margin-top: 32%;
+  margin-top: 2%;
   color: white;
 }
 
 .btnText {
+  margin: 0;
+  padding-top: 1.2vw;
   position: relative;
   font-weight: 400;
   top: -10%;
 }
 
-.sliderPrev {
-  margin-top: 5%;
-  list-style: none;
-  position: absolute;
-  width: 25%;
-  height: 100px;
-  left: 60%;
-  
-}
-
-.prevImg {
-  width: inherit;
-  display: inline-block;
-  object-fit: cover;
-  object-position: center;
-  height: 500px;
-}
-
 .modelsTitle {
-  position: absolute;
-  font-size: 2.2em;
+  position: relative;
+  font-size: 3vw;
   font-weight: 500;
   margin: 0;
   margin-left: 7%;
-  margin-top: 30%;
+  margin-top: 4vw;
 }
 
-.modelsSlider {
-  position: absolute;
-  list-style: none;
-  justify-content: space-evenly;
-  width: 80%;
-  align: center;
-  margin-left: 10%;
-  margin-top: 35%;
+@media (max-device-width: 600px) {
+  .btns_header {
+    padding-left: 47vw;
+    width: 16vw;
+  }
+  .logos_header {
+    padding-left: 1vw;
+    width: 32vw;
+  }
+  .title {
+    width: 86%;
+    font-size: 9vw;
+  }
+  .desc {
+    width: 86%;
+    font-size: 6vw;
+    margin-top: 7%;
+  }
+
+  .leaveWill, .catalogScroll, .catalogBtn {
+    margin-top: 5%;
+    width: 85vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+  
+  .btnText {
+    padding-top: 3vw;
+  }
+
+  .modelsTitle {
+    margin-top: 10vw;
+    font-size: 8vw;
+  }
 }
 
-.card {
-  width: min-content;
-  margin: 0;
+/* FOOTER */
+
+.footer {
+  position: relative;
+  margin-top: 6%;
+  background-color: #D0CECE;
+  height: min-content;
+}
+
+.tm {
+  position: relative;
   display: inline-block;
-  /* padding-right: 3%; */
   padding-top: 3%;
-  /* margin-top: 80%; */
-  /* padding-bottom: 10%; */
-}
-
-.cardImg {
-  object-fit: cover;
-  object-position: center;
-  width: 250px;
-  height: 250px;
-}
-
-.cardName {
-  position: relative;
-  display:list-item;
-  width: fit-content;
-  font-size: 1.9em;
+  padding-left: 8%;
+  font-size: 1vw;
   font-weight: 400;
-  margin: 0;
-  padding-left: 2%;
+  color: #B7B7B7;
+  width: 35%;
 }
 
-.cardDesc {
-  display: inline;
+.payment {
   position: relative;
-  width: fit-content;
-  font-size: 0.9em;
+  padding-left: 8%;
+  top: -2vw;
+}
+
+.phone, .adress, .mail {
+  position: relative;
+  top: -4vw;
+  margin: 0;
   font-weight: 400;
-  margin: 0;
-  padding-top: 0%;
-  padding-left: 2%;
+  width: fit-content;
+  font-size: 0.8vw;
+  padding-left: 70%;
+  padding-bottom: .5%;
+  display: block;
 }
 
-.cardBill {
-  display: inline;
-  position: relative;
-  width: fit-content;
-  font-size: 1em;
+.phone {
   font-weight: 700;
-  margin: 0;
-  padding-top: 0%;
-  padding-left: 1%;
-}
-
-.cardSpan {
-  display: inline;
-}
-
-.modelsList {
-  margin: 0;
-  display: inline;
-  list-style: none;
-  white-space: nowrap;
-  width: 100px;
 }
