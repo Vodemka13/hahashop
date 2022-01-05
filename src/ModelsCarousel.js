@@ -6,6 +6,7 @@ import Slider from 'react-slick';
 import Card from './Card';
 import './carousel.css'
 import Context from "./Context";
+import defaultProps from "react-slick/lib/default-props";
 
 
 function getWindowDimensions() {
@@ -16,18 +17,13 @@ function getWindowDimensions() {
     };
   }
 
-function ModelsCarousel({active, setActive}) {
+function ModelsCarousel(props) {
     
-    console.log(getWindowDimensions()['width'])
     const settings = {
         dots: true,
-        fade: false,
         infinite: true,
         speed: 500,
-        autoPlay: true,
-        autoPlaySpeed: 2000,
         slidesToShow: 4,
-        arrows: true,
         slidesToScroll: 4,
         className: "modelsSlider"
       }
@@ -35,15 +31,13 @@ function ModelsCarousel({active, setActive}) {
         settings['slidesToShow'] = 2
         settings['slidesToScroll'] = 2
     }
+    
     return(
         <Slider {...settings}>
-        <div><Card active = { active } setActive = { setActive } /></div>
-        <div><Card active = { active } setActive = { setActive } /></div>
-        <div><Card active = { active } setActive = { setActive } /></div>
-        <div><Card active = { active } setActive = { setActive } /></div>
-        <div><Card active = { active } setActive = { setActive } /></div>
-        <div><Card active = { active } setActive = { setActive } /></div>
-        <div><Card active = { active } setActive = { setActive } /></div>
+            {props.models.map(model =>
+                <Card setItem = {props.setItem} key = {model.name} model = { model } active = { props.active } setActive = { props.setActive } />
+                // <div><h1> {model.name} </h1></div>
+            ) }
         </Slider>
     )
 }

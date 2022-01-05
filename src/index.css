@@ -36,7 +36,19 @@ code {
   padding-left: 65vw;
 }
 
+.cartBtn, .likeBtn{
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  margin-left: 64.9vw;
+  margin-top: .8vw;
+  background-color:rgba(0, 0, 0, 0);
+  border: 0;
+}
 
+.likeBtn {
+  margin-left: 68vw;
+}
 
 .title {
   position: relative;
