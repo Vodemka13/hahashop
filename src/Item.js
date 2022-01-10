@@ -1,5 +1,6 @@
 import React from "react";
 import './item.css'
+import likePic from './pics/like.svg' 
 
 const Item = ({item, active, setActive}) => {
 
@@ -15,7 +16,7 @@ const Item = ({item, active, setActive}) => {
                         <h1 className="itemBill"> {item.bill} </h1>
                         <span>
                             <button className='itemCart'> Добавить в корзину </button>
-                            <img className='itemLike' src="https://i.ibb.co/vz5SKnw/like.png" alt="like" border="0"/>
+                            <img className='itemLike' src={likePic} alt="like" border="0"/>
                         </span>
                     </div>
                     <img className="itemImg" src={item.img}/>

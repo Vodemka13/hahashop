@@ -25,16 +25,18 @@ function ModelsCarousel(props) {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
-        className: "modelsSlider"
+        className: "modelsSlider",
+        arrows: false
       }
     if (getWindowDimensions()['width'] <= 600) {
         settings['slidesToShow'] = 2
         settings['slidesToScroll'] = 2
     }
+
     
     return(
         <Slider {...settings}>
-            {props.models.map(model =>
+            {props.models['models'].map(model =>
                 <Card setItem = {props.setItem} key = {model.name} model = { model } active = { props.active } setActive = { props.setActive } />
                 // <div><h1> {model.name} </h1></div>
             ) }

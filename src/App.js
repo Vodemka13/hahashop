@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import logosHeader from './pics/logos_header.svg'
 import btnsHeader from './pics/btns_header.svg'
 import "slick-carousel/slick/slick.css"; 
@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import ModelsCarousel from './ModelsCarousel';
 import Item from './Item';
 import Cart from './Cart';
+import Context from './Context';
+import { Cookies } from 'react-cookie';
 import {
   BrowserRouter as Router,
   Routes,
@@ -15,40 +17,48 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [models, setModels] = useState([
+    {
+      'id': 1, 'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    },
+    {
+      'id': 2, 'name': 'Коты', 'desc': 'Поверьте это коты :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    },
+    {
+      'id': 3, 'name': 'Собаки', 'desc': 'Поверьте это собаки :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    },
+    {
+      'id': 4, 'name': 'Попугаи', 'desc': 'Поверьте это попугаи :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    },
+    {
+      'id': 5, 'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    },
+    {
+      'id': 6, 'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    },
+    {
+      'id': 7, 'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
+    }
+  ])
+  const [cart, setCart] = useState([
+    [1, 1], [2, 2], [4, 228]
+  ])
+
   return(
     <div>
-      <Router>
-        <RoutesFunc/>
-      </Router>
+      <Context.Provider value={{models, cart}}>
+        <Router>
+          <RoutesFunc/>
+        </Router>
+      </Context.Provider>
+      
     </div>
   )
 }
 
 const Shop = () => {
+  const models = useContext(Context);
   
-  const models = [
-    {
-        'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    },
-    {
-      'name': 'Коты', 'desc': 'Поверьте это коты :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    },
-    {
-      'name': 'Собаки', 'desc': 'Поверьте это собаки :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    },
-    {
-      'name': 'Попугаи', 'desc': 'Поверьте это попугаи :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    },
-    {
-        'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    },
-    {
-      'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    },
-    {
-      'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100₽', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
-    }, 
-  ]
   const [itemActive, setItemActive] = useState(false)
   const [currentItem, setCurrentItem] = useState({})
 
@@ -59,28 +69,12 @@ const Shop = () => {
       behavior: 'smooth',
     });
   }
-
-  const settingsPrev = {
-    dots: false,
-    fade: false,
-    infinite: true,
-    slidesToShow: 1,
-    autoPlay: true,
-    autoPlaySpeed: 100,
-    speed: 400,
-    arrows: true,
-    slidesToScroll: 1,
-    className: "sliderPrev",
-    cssEase: "linear",
-    pauseOnHover: false,
-    pauseOnFocus: false,
-  }
     return (
     <div className="wrapper">
       <header className='header'>
         <img className='logos_header' src={logosHeader}/>
-        <button className='cartBtn'/>
-        <button className='likeBtn'/>
+        <Link to='/cart'><div className='cartBtn'/></Link>
+        <div className='likeBtn'/>
         <img className='btns_header' src={btnsHeader}/>
       </header>
       <h1 className='title'> Магазин авторской 3D-продукции. </h1>

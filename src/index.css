@@ -40,14 +40,14 @@ code {
   position: absolute;
   width: 3vw;
   height: 3vw;
-  margin-left: 64.9vw;
-  margin-top: .8vw;
+  margin-left: 83.3vw;
+  top: .7vw;
   background-color:rgba(0, 0, 0, 0);
   border: 0;
 }
 
-.likeBtn {
-  margin-left: 68vw;
+.cartBtn {
+  margin-left: 86.6vw;
 }
 
 .title {
@@ -152,6 +152,19 @@ code {
     margin-top: 10vw;
     font-size: 8vw;
   }
+  .cartBtn, .likeBtn{
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    margin-left: 79.8vw;
+    top: 2.3vw;
+    background-color:rgba(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .cartBtn {
+    margin-left: 89.4vw;
+  }
 }
 
 /* FOOTER */
@@ -194,4 +207,22 @@ code {
 
 .phone {
   font-weight: 700;
+}
+
+@media (max-device-width: 600px) {
+  .footer {
+    margin-top: 12%;
+  }
+  .tm {
+    font-size: 2vw;
+    width: 45%;
+  }
+  .payment {
+    width: 30vw;
+  }
+  .phone, .adress, .mail {
+    top: -12vw;
+    font-size: 1.8vw;
+    padding-left: 60%;
+  }
 }

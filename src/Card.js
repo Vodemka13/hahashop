@@ -6,6 +6,9 @@ import { Component, createContext } from "react";
 
 
 export default function Card(props) {
+
+    // const models = React.useContext
+
     return(
         <div className='card' onClick={() => {
             props.setActive(true)
