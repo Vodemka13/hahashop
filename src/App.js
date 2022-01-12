@@ -41,7 +41,7 @@ function App() {
     }
   ])
   const [cart, setCart] = useState([
-    [1, 1], [2, 2], [4, 228]
+    [1, 1], [2, 2], [4, 9]
   ])
 
   return(

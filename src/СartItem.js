@@ -13,7 +13,9 @@ function CartItem({ item, quantity }) {
                 <div className='cartRight'>
                     <h1 className="cartName">{item['name']}</h1>
                     <img className="cartItemQuantity" src={quantityPic}/>
-                    <h2>{quantity}</h2>
+                    <h2 className="cartItemQuantityText">{quantity}</h2>
+                    <div className="cartButtonRight"/>
+                    <div className='cartButtonLeft'/>
                 </div>
             </span>
         </div>

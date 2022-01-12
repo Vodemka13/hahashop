@@ -41,9 +41,26 @@
 .cartItemQuantityText {
     position: relative;
     display: inline-block;
-    left: 18.85vw;
-    top: -1vw; 
-    font-weight: 500;
+    width: 1vw;
+    left: 7.6vw;
+    top: -8.7vw; 
+    font-weight: 400;
     margin: 0;
-    font-size: 1vw;
+    font-size: 1.4vw;
+}
+
+.cartButtonRight, .cartButtonLeft {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    border: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 2vw;
+    height: 2vw;
+    top: -8.2vw;
+    left: 8.2vw;
+}
+
+.cartButtonLeft {
+    left: 1.8vw;
 }
