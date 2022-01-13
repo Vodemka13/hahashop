@@ -24,9 +24,20 @@ const Cart = () => {
                 <div className='likeBtn'/>
                 <img className='btns_header' src={btnsHeader}/>
             </header>
+            <h1 className={cart.length != 0 ? "cartTitle" : 'cartTitleEmpty'}> {cart.length != 0 ? 'Корзина' : 'Корзина пуста 😥'}</h1>
             <ul> {cart.map(item => {
                 return <CartItem item={models[item[0] - 1]} quantity={item[1]}/>
             }) } </ul>
+            <h1 className='cartTotal'> {cart.length != 0 ? 'К оплате' : ''}<br/> {cart.length != 0 ? cart.map(obj => models[obj[0]]['bill'] * obj[1]).reduce((prev, curr) => prev + curr) + '₽' : ''}</h1>
+            <footer className='footer'>
+                <span>
+                    <h3 className='tm'> Все торговые марки принадлежат их владельцам. Копирование составляющих частей сайта в какой бы то ни было форме без разрешения владельца авторских прав запрещено. </h3>
+                    <h3 className='phone'> +79163505356 </h3>
+                    <h3 className='mail'> hahaton-corp@yandex.ru </h3>
+                    <h3 className='adress'> Г. Москва, мкр. Северное Чертаново к. 809 </h3>
+                </span>
+                <img className='payment' src="https://i.ibb.co/Dt7FS4w/payment.png" alt="payment" border="0"/>
+            </footer>
         </div>
     )
 }

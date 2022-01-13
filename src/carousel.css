@@ -7,14 +7,20 @@
     margin-top: 3%;
   }
   
-  .card {
+  .card, .cardActive {
     width: min-content;
     padding: 0;
     border: 0;
     background-color: white;
     margin: 0;
     display: inline-block;
-    padding-top: 3%;
+    /* padding-top: 3%; */
+    padding-bottom: 3%;
+    border-radius: .5vw;
+  }
+
+  .cardActive {
+    background-color: #EEEEEE;
   }
   
   .cardImg {

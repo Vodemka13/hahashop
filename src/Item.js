@@ -1,11 +1,14 @@
-import React from "react";
+import {React, useContext} from "react";
 import './item.css'
-import likePic from './pics/like.svg' 
+import likePic from './pics/like.svg'
+import Context from "./Context";
 
 const Item = ({item, active, setActive}) => {
-
-    console.log(item);
-
+    
+    const cart = useContext(Context)['cart'];
+    const models = useContext(Context)['models'];
+    const {setCart} = useContext(Context);
+    console.log(cart)
     return(
         <div className={active ? 'item active' : 'item'} onClick={() => setActive(false)}>
             <div className="itemContent" onClick={e => e.stopPropagation()}>
@@ -13,9 +16,9 @@ const Item = ({item, active, setActive}) => {
                     <div className='itemLeft'>
                         <h1 className='itemName'> {item.name} </h1>
                         <h2 className='itemDesc'> {item.fulldesc} </h2>
-                        <h1 className="itemBill"> {item.bill} </h1>
+                        <h1 className="itemBill"> {item.bill}₽ </h1>
                         <span>
-                            <button className='itemCart'> Добавить в корзину </button>
+                            <button onClick={setCart.bind(null, Array.from(cart.concat([[Object.values(models).findIndex(model => model === item) + 1, 1]])))} disabled={cart.filter(obj => obj[0] === Object.values(models).findIndex(model => model === item) + 1).length === 1} className={cart.filter(obj => obj[0] == Object.values(models).findIndex(model => model == item) + 1).length === 1 ? 'itemCartAdded' : 'itemCart'}> {cart.filter(obj => obj[0] == Object.values(models).findIndex(model => model == item) + 1).length === 1 ? 'Товар в корзине' : 'Добавить в корзину'} </button>
                             <img className='itemLike' src={likePic} alt="like" border="0"/>
                         </span>
                     </div>

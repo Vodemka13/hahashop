@@ -47,7 +47,7 @@
     font-size: 2.7vw;
 }
 
-.itemCart {
+.itemCart, .itemCartAdded {
     position: relative;
     display: inline-block;
     margin: 0;
@@ -59,6 +59,10 @@
     color: white;
     font-size: 1vw;
     font-weight: lighter;
+}
+.itemCartAdded {
+    background-color: #DFDFDF;
+    color: gray;
 }
 
 .itemLike {
@@ -114,7 +118,7 @@
         margin-top: 0;
         top: 2vw;
     }
-    .itemCart {
+    .itemCart, .itemCartAdded {
         width: 26vw;
         height: 7vw;
         top: 1vw;

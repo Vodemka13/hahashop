@@ -1,3 +1,14 @@
+.cartTitle, .cartTitleEmpty {
+    font-size: 3vw;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 2vw;
+    margin-left: 10vw;
+}
+.cartTitleEmpty {
+    margin-bottom: 25vh;
+}
+
 .cartItem {
     border: solid #D9D8D8 1px;
     width: 79vw;
@@ -54,7 +65,7 @@
     display: inline-block;
     text-align: center;
     border: 0;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0);
     width: 2vw;
     height: 2vw;
     top: -8.2vw;
@@ -63,4 +74,38 @@
 
 .cartButtonLeft {
     left: 1.8vw;
+}
+
+.cartSingleCost {
+    position: relative;
+    width: fit-content;
+    font-size: 1.8vw;
+    font-weight: 400;
+    color: #D9D8D8;
+    left: 64.5vw;
+    top: -15vw;
+}
+
+.cartWholeCost {
+    position: relative;
+    width: fit-content;
+    font-size: 2.5vw;
+    font-weight: 400;
+    margin: 0;
+    left: 64.5vw;
+    top: -16.5vw;
+}
+
+.cartTotal {
+    font-size: 3vw;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 10vw;
+}
+
+.cartDelete {
+    position: relative;
+    width: 3vw;
+    left: 76vw;
+    top: -27.5vw; 
 }
