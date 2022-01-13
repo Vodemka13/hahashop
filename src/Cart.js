@@ -11,6 +11,14 @@ import {
     Link
   } from "react-router-dom";
 
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height
+    };
+  }
+
 const Cart = () => {
 
     const cart = useContext(Context)['cart'];
@@ -29,7 +37,7 @@ const Cart = () => {
                 return <CartItem item={models[item[0] - 1]} quantity={item[1]}/>
             }) } </ul>
             <h1 className='cartTotal'> {cart.length != 0 ? 'К оплате' : ''}<br/> {cart.length != 0 ? cart.map(obj => models[obj[0]]['bill'] * obj[1]).reduce((prev, curr) => prev + curr) + '₽' : ''}</h1>
-            <footer className='footer'>
+            <footer className={getWindowDimensions()['width'] <= 600 && cart.length < 3 ? 'cartFooterSmall' : 'cartFooter'}>
                 <span>
                     <h3 className='tm'> Все торговые марки принадлежат их владельцам. Копирование составляющих частей сайта в какой бы то ни было форме без разрешения владельца авторских прав запрещено. </h3>
                     <h3 className='phone'> +79163505356 </h3>

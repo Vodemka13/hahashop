@@ -40,7 +40,7 @@ function App() {
       'id': 7, 'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
     }
   ])
-  const [cart, setCart] = useState([[1, 1], [2, 1]])
+  const [cart, setCart] = useState([[1, 1]])
 
   return(
     <div>
