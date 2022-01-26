@@ -8,7 +8,8 @@ import ModelsCarousel from './ModelsCarousel';
 import Item from './Item';
 import Cart from './Cart';
 import Context from './Context';
-import { Cookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
+import Cookies from 'universal-cookie';
 import {
   BrowserRouter as Router,
   Routes,
@@ -40,11 +41,19 @@ function App() {
       'id': 7, 'name': 'Слоны', 'desc': 'Слоненок в подарок :)', 'fulldesc': 'Вот такие вот прикольные слоны) Еще и слоненок в подарок) Я ни на что не намекаю, но мне кажется, что надо брать)', 'bill': '100', 'img': 'https://i.ibb.co/5Tg1cBN/slon.jpg'
     }
   ])
-  const [cart, setCart] = useState([[1, 1]])
+  const cookies = new Cookies();
+  if (cookies.get('cart') == undefined) {
+    cookies.set('cart', cart, { path: '/' });
+    console.log(cookies.get('killa')); // Pacman
+  }
+  const [cart, setCart] = useState(cookies.get('cart'))
+  
+  // const [cookies, setCookie] = useCookies(["cart"]);
+  
 
   return(
     <div>
-      <Context.Provider value={{models, cart, setCart: setCart}}>
+      <Context.Provider value={{models, cart, setCart: setCart, cookies}}>
         <Router>
           <RoutesFunc/>
         </Router>

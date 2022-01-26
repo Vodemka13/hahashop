@@ -106,8 +106,8 @@
 .cartDelete {
     position: relative;
     width: 3vw;
-    left: 76vw;
-    top: -27.5vw; 
+    left: 76.2vw;
+    top: -27.8vw; 
 }
 .cartFooter{
     position: relative;
@@ -165,7 +165,7 @@
     .cartDelete {
         width: 6vw;
         left: 72vw;
-        top: -60vw;
+        top: -59.8vw;
     }
     .cartSingleCost {
         font-size: 3.5vw;

@@ -6,9 +6,13 @@ import Context from "./Context";
 const Item = ({item, active, setActive}) => {
     
     const cart = useContext(Context)['cart'];
+    const cookie = useContext(Context)['cookies']
     const models = useContext(Context)['models'];
     const {setCart} = useContext(Context);
-    console.log(cart)
+    const {setCookie} = useContext(Context);
+
+    console.log()
+    if (cart != []) cookie.set('cart', cart, {path: '/'})
     return(
         <div className={active ? 'item active' : 'item'} onClick={() => setActive(false)}>
             <div className="itemContent" onClick={e => e.stopPropagation()}>

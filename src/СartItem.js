@@ -6,16 +6,17 @@ import quantityPic from './pics/quantity.svg'
 function CartItem({ item, quantity }) {
 
     const cart = useContext(Context)['cart'];
+    const cookie = useContext(Context)['cookies'];
+
     const models = useContext(Context)['models'];
     const {setCart} = useContext(Context)
+    console.log(item);
 
     function addQuantity(adv) {
         console.log('running')
         console.log(adv);
     }
-    //console.log(item)
-    console.log()
-    //console.log(quantity)
+    cookie.set('cart', cart, {path: '/'})
 
     return (
         <div className="cartItem">
@@ -33,7 +34,6 @@ function CartItem({ item, quantity }) {
                 </div>
             </span>
         </div>
-        
     )
 }
 

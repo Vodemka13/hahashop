@@ -19,7 +19,7 @@
 .itemContent {
     width: 45vw;
     height: 22vw;
-    padding: 2vw;
+    padding: 1.5vw;
     background-color: white;
 }
 
@@ -85,7 +85,7 @@
     width: 19vw;
     object-fit: cover;
     object-position: center;
-}
+}  
 
 .itemLeft {
     display: inline-block;

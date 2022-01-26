@@ -10,6 +10,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import { Cookies } from "react-cookie";
 
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -22,7 +23,9 @@ import {
 const Cart = () => {
 
     const cart = useContext(Context)['cart'];
+    const cookie = useContext(Context)['cookies'];
     const models = useContext(Context)['models'];
+    console.log(cart)
 
     return(
         <div>
@@ -36,7 +39,7 @@ const Cart = () => {
             <ul> {cart.map(item => {
                 return <CartItem item={models[item[0] - 1]} quantity={item[1]}/>
             }) } </ul>
-            <h1 className='cartTotal'> {cart.length != 0 ? 'К оплате' : ''}<br/> {cart.length != 0 ? cart.map(obj => models[obj[0]]['bill'] * obj[1]).reduce((prev, curr) => prev + curr) + '₽' : ''}</h1>
+            <h1 className='cartTotal'> {cart.length != 0 ? 'К оплате' : ''}<br/> {cart.length != 0 ? cart.map(obj => models[obj[0] - 1]['bill'] * obj[1]).reduce((prev, curr) => prev + curr) + '₽' : ''}</h1>
             <footer className={getWindowDimensions()['width'] <= 600 && cart.length < 3 ? 'cartFooterSmall' : 'cartFooter'}>
                 <span>
                     <h3 className='tm'> Все торговые марки принадлежат их владельцам. Копирование составляющих частей сайта в какой бы то ни было форме без разрешения владельца авторских прав запрещено. </h3>
