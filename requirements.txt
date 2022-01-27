@@ -2,3 +2,4 @@ npm install react-cookie
 npm install react-slick --save
 npm install slick-carousel --save
 npm install react-router-dom
+npm install easybase-react
