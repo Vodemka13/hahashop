@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  background: #FFF;
+}
+
+.header {
+  background: rgba(208, 206, 206, 0.55);
+  width: 100%;
+  min-height: 3vw;
+}
+
+.logos_header {
+  padding: .5%;
+  padding-left: 7vw;
+  min-width: 11vw;
+  width: 11vw;
+}
+
+.btns_header {
+  padding: 1%;
+  width: 6vw;
+  min-width: 6vw;
+  padding-left: 65vw;
+}
+
+.cartBtn, .likeBtn{
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  margin-left: 83.3vw;
+  top: .7vw;
+  background-color:rgba(0, 0, 0, 0);
+  border: 0;
+}
+
+.cartBtn {
+  margin-left: 86.6vw;
+}
+
+.title {
+  position: relative;
+  width: 60%;
+  height: fit-content;
+  margin: 0;
+  margin-left: 8%;
+  margin-top: 2%;
+  font-size: 6vw;
+  font-weight: 500;
+}
+
+.desc {
+  position: relative;
+  width: 50%;
+  height: fit-content;
+  margin: 0;
+  margin-left: 8%;
+  margin-top: 2%;
+  font-size: 3vw;
+  font-weight: 500;
+  color: rgba(116, 114, 114, 1);
+}
+
+.catalogScroll, .leaveWill, .catalogBtn {
+  position: relative;
+  margin: 0;
+  margin-top: 2%;
+  margin-left: 7%;
+  background-color: rgba(229, 228, 228, 1);
+  width: 30vw;
+  height: 4vw;
+  border-radius: 30px;
+  padding-top: 0.1vw;
+  text-align: center;
+  font-size: 1.2vw;
+  display: block;
+}
+
+.catalogBtn {
+  position: absolute;
+  z-index: 1;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.leaveWill {
+  background-color: black;
+  margin-top: 2%;
+  color: white;
+}
+
+.btnText {
+  margin: 0;
+  padding-top: 1.2vw;
+  position: relative;
+  font-weight: 400;
+  top: -10%;
+}
+
+.modelsTitle {
+  position: relative;
+  font-size: 3vw;
+  font-weight: 500;
+  margin: 0;
+  margin-left: 7%;
+  margin-top: 4vw;
+}
+
+@media (max-device-width: 600px) {
+  .btns_header {
+    padding-left: 47vw;
+    width: 16vw;
+  }
+  .logos_header {
+    padding-left: 1vw;
+    width: 32vw;
+  }
+  .title {
+    width: 86%;
+    font-size: 9vw;
+  }
+  .desc {
+    width: 86%;
+    font-size: 6vw;
+    margin-top: 7%;
+  }
+
+  .leaveWill, .catalogScroll, .catalogBtn {
+    margin-top: 5%;
+    width: 85vw;
+    height: 10vw;
+    font-size: 4vw;
+  }
+  
+  .btnText {
+    padding-top: 3vw;
+  }
+
+  .modelsTitle {
+    margin-top: 10vw;
+    font-size: 8vw;
+  }
+  .cartBtn, .likeBtn{
+    position: absolute;
+    width: 8vw;
+    height: 8vw;
+    margin-left: 79.8vw;
+    top: 2.3vw;
+    background-color:rgba(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .cartBtn {
+    margin-left: 89.4vw;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  margin-top: 6%;
+  background-color: #D0CECE;
+  height: min-content;
+}
+
+.tm {
+  position: relative;
+  display: inline-block;
+  padding-top: 3%;
+  padding-left: 8%;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #B7B7B7;
+  width: 35%;
+}
+
+.payment {
+  position: relative;
+  padding-left: 8%;
+  top: -2vw;
+}
+
+.phone, .adress, .mail {
+  position: relative;
+  top: -4vw;
+  margin: 0;
+  font-weight: 400;
+  width: fit-content;
+  font-size: 0.8vw;
+  padding-left: 70%;
+  padding-bottom: .5%;
+  display: block;
+}
+
+.phone {
+  font-weight: 700;
+}
+
+@media (max-device-width: 600px) {
+  .footer {
+    margin-top: 12%;
+  }
+  .tm {
+    font-size: 2vw;
+    width: 45%;
+  }
+  .payment {
+    width: 30vw;
+  }
+  .phone, .adress, .mail {
+    top: -12vw;
+    font-size: 1.8vw;
+    padding-left: 60%;
+  }
+}

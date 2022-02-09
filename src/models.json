@@ -1,0 +1,50 @@
+[
+ {
+  "id": 17,
+  "name": "слоны",
+  "descr": "Слоненок в подарок :)",
+  "fulldesc": "hehe",
+  "bill": 100,
+  "img": "https://i.ibb.co/5Tg1cBN/slon.jpg"
+ },
+ {
+  "id": 18,
+  "name": "коты",
+  "descr": "Поверьте, это коты :)",
+  "fulldesc": "hehe",
+  "bill": 100,
+  "img": "https://i.ibb.co/5Tg1cBN/slon.jpg"
+ },
+ {
+  "id": 19,
+  "name": "Собаки",
+  "descr": "Поверьте, это собаки :)",
+  "fulldesc": "hehe",
+  "bill": 100,
+  "img": "https://i.ibb.co/5Tg1cBN/slon.jpg"
+ },
+ {
+  "id": 20,
+  "name": "Пони",
+  "descr": "Поверьте, это пони :)",
+  "fulldesc": "hehe",
+  "bill": 100,
+  "img": "https://i.ibb.co/5Tg1cBN/slon.jpg"
+ },
+ {
+  "id": 21,
+  "name": "Слоны",
+  "descr": "Слонятаааа :)",
+  "fulldesc": "hehe",
+  "bill": 100,
+  "img": "https://i.ibb.co/5Tg1cBN/slon.jpg"
+ },
+ {
+  "id": 22,
+  "name": "Слоны",
+  "descr": "Слонятаааа :)",
+  "fulldesc": "hehe",
+  "bill": 100,
+  "img": "https://i.ibb.co/5Tg1cBN/slon.jpg"
+ }
+]
